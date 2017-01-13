@@ -85,7 +85,7 @@ namespace EventbriteNET.Http
             return this.ExecuteAsync<Organizer>(request);
         }
 
-        public IList<Event> GetOrganizerEvents(long id, StatusOptions[] status = null, OrderOptions[] orderBy = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? onlyPublic = null)
+        public IList<Event> GetOrganizerEvents(long id, StatusOptions[] status = null, OrderOptions[] orderBy = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? onlyPublic = null, bool includeVenues = false)
         {
             var request = new RestRequest("organizers/{id}/events/");
             request.AddUrlSegment("id", id.ToString());
@@ -109,6 +109,15 @@ namespace EventbriteNET.Http
             var events = this.Execute<PagedEvents>(request);
 
             Context.Pagination = events.Pagination;
+
+            if (includeVenues)
+            {
+                foreach (var ev in events.Events)
+                {
+                    if (ev.VenueId.HasValue)
+                        ev.Venue = Context.Get<Venue>(ev.VenueId.Value);
+                }
+            }
 
             return events.Events;
         }
