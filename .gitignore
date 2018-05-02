@@ -10,3 +10,5 @@
 /EventbriteNETConsoleTest/bin/Debug
 /EventbriteNETConsoleTest/EventbriteNETConsoleTest.csproj.user
 /.vs/EventbriteNET/v14
+/EventbriteNET/bin
+/EventbriteNET/obj
