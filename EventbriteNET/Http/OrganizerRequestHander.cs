@@ -85,7 +85,7 @@ namespace EventbriteNET.Http
             return this.ExecuteAsync<Organizer>(request);
         }
 
-        public IList<Event> GetOrganizerEvents(long id, StatusOptions[] status = null, OrderOptions[] orderBy = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? onlyPublic = null)
+        public IList<Event> GetOrganizerEvents(long id, StatusOptions[] status = null, OrderOptions[] orderBy = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? onlyPublic = null, params string[] expansions)
         {
             var request = new RestRequest("organizers/{id}/events/");
             request.AddUrlSegment("id", id.ToString());
@@ -100,6 +100,11 @@ namespace EventbriteNET.Http
                 request.AddQueryParameter("start_date.range_end", dateStart.ToUrlParam());
             if (onlyPublic.HasValue)
                 request.AddQueryParameter("only_public", onlyPublic.ToUrlParam());
+
+            if (expansions != null && expansions.Any())
+            {
+                request.AddQueryParameter("expand", string.Join(",", expansions));
+            }
 
             Context.OrganizerId = id;
 

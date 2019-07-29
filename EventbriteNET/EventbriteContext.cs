@@ -142,10 +142,16 @@ namespace EventbriteNET
         /// <param name="dateEnd">Only return events with start dates before the given date.</param>
         /// <param name="onlyPublic">Only show public events even if viewing your own events.</param>
         /// <returns>Events corresponding to the parameters if any</returns>
-        public IList<Event> GetOrganizerEvents(long id, StatusOptions[] status = null, OrderOptions[] orderBy = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? onlyPublic = null)
+        public IList<Event> GetOrganizerEvents(long id, StatusOptions[] status = null, OrderOptions[] orderBy = null, DateTime? dateStart = null, DateTime? dateEnd = null, bool? onlyPublic = null, params string[] expansions)
         {
             var handler = (OrganizerRequestHander)GetHandler(typeof(Organizer));
-            return handler.GetOrganizerEvents(id, status, orderBy, dateStart, dateEnd, onlyPublic);
+            return handler.GetOrganizerEvents(id, status, orderBy, dateStart, dateEnd, onlyPublic, expansions);
+        }
+
+        public IList<TicketClass> GetEventTicketClasses(long eventId)
+        {
+            var handler = (EventRequestHander)GetHandler(typeof(Event));
+            return handler.GetEventTicketClasses(eventId);
         }
 
         /// <summary>

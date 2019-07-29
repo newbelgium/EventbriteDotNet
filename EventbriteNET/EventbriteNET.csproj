@@ -57,6 +57,7 @@
     <Compile Include="Image.cs" />
     <Compile Include="Organizer.cs" />
     <Compile Include="Collections\IPaginatedResponse.cs" />
+    <Compile Include="TicketAvailability.cs" />
     <Compile Include="TicketClass.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Venue.cs" />

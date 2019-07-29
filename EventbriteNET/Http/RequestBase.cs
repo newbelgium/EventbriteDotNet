@@ -163,6 +163,8 @@ namespace EventbriteNET.Http
             {
                 try
                 {
+
+                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                     var response = client.SendAsync(httpRequest);
 
                     return response.Result;

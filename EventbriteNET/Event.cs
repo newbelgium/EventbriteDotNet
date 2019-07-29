@@ -86,6 +86,8 @@ namespace EventbriteNET
         public Subcategory Format { get; set; }
         [JsonProperty("ticket_classes")]
         public IList<TicketClass> TicketClasses { get; set; }
+        [JsonProperty("ticket_availability")]
+        public TicketAvailability TicketAvailability { get; set; }
     }
 
     public class PagedEvents : EventbriteObject

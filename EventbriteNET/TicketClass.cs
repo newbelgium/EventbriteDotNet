@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 
 namespace EventbriteNET
 {
@@ -57,5 +58,14 @@ namespace EventbriteNET
         public DateTime? AutoHideBefore { get; set; }
         [JsonProperty("auto_hide_after")]
         public DateTime? AutoHideAfter { get; set; }
+    }
+
+    public class PagedTicketClasses : EventbriteObject
+    {
+
+        [JsonProperty("pagination")]
+        public Pagination Pagination { get; set; }
+        [JsonProperty("ticket_classes")]
+        public List<TicketClass> TicketClasses { get; set; }
     }
 }

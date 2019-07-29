@@ -12,65 +12,29 @@ namespace EventbriteNETConsoleTest
     {
         static void Main(string[] args)
         {
-            var eventbriteNET = new EventbriteContext("LLGPFYIY2UBUUHOK5DP6");
+            var context = new EventbriteContext("URI7ZVJW2FXE7DTIFK46");
 
+            var fetchedEvents = context.GetOrganizerEvents(6420441677, status: new[] { EventbriteNET.StatusOptions.live }, dateStart: DateTime.Now, expansions: "ticket_availability");
 
-            var users = eventbriteNET.Get<User>();
+            Console.WriteLine(context.Page);
+            Console.WriteLine(context.Pagination);
 
-            Console.WriteLine(users.Count);
+            var withTicketDetails = fetchedEvents.Where(e => e.TicketAvailability?.HasAvailableTickets == true);
 
-            var user = users[0];
-
-            Console.WriteLine(user.Emails.Count);
-            Console.WriteLine(user.Name);
-            Console.WriteLine(user.FirstName);
-            Console.WriteLine(user.LastName);
-          
-
-            //var ebEvents = eventbriteNET.Get<Event>().ToList();
-
-            //var pagedEvents = eventbriteNET.GetOwnedEvents();
-
-            var pagedEvents = eventbriteNET.Search();
-
-            eventbriteNET.Pagination = pagedEvents.Pagination;
-
-            var ebEvents = pagedEvents.Events;
-
-            Console.WriteLine(string.Format("Pagination: ObjectCount {0} PageCount {1} PageNumber {2} PageSize {3}", eventbriteNET.Pagination.ObjectCount, eventbriteNET.Pagination.PageCount, eventbriteNET.Pagination.PageNumber, eventbriteNET.Pagination.PageSize));
-            ebEvents.ForEach(e =>
+            foreach (var ticketsleft in withTicketDetails)
             {
-                Console.WriteLine(string.Format("{0} {1} {2}", e.Description.Text, e.Start.Local, e.End.Local));
-                eventbriteNET.EventId = e.Id;
-                
-                Console.WriteLine(string.Format("Location {0}", e.OnlineEvent ? "Online Event" : string.Format("{0} {1} {2}", e.VenueId, e.Venue.Address.Address1, e.Venue.Address.City)));
-                if (!e.OnlineEvent)
+                Console.WriteLine(ticketsleft.Name.Text);
+                var ticketClasses = context.GetEventTicketClasses(ticketsleft.Id);
+                var allR = 0;
+                foreach (var ticketClass in ticketClasses)
                 {
-                    var venuue = eventbriteNET.Get<Venue>(e.VenueId ?? 0);
-                    e.Venue = venuue;
-                    Console.WriteLine(e.Venue.ResourceUri);
-                    Console.WriteLine(string.Format("Location {0}", e.Venue.Name));
+                    var t = ticketClass.QuantityTotal;
+                    var s = ticketClass.QuantitySold;
+                    var r = t - s;
+                    allR = allR + r.GetValueOrDefault();
                 }
-
-         
-                
-
-
-                var attendees = eventbriteNET.Get<Attendee>().ToList();
-
-                Console.WriteLine(string.Format("Attendee Pagination: ObjectCount {0} PageCount {1} PageNumber {2} PageSize {3}", eventbriteNET.Pagination.ObjectCount, eventbriteNET.Pagination.PageCount, eventbriteNET.Pagination.PageNumber, eventbriteNET.Pagination.PageSize));
-
-                Console.WriteLine(string.Format("Attendees {0}", attendees.Count));
-
-               
-
-               
-                attendees.ForEach(a => Console.WriteLine(a.profile.email));
-
-            });
-
-            //
-          
+                Console.WriteLine(allR);
+            }
 
             Console.ReadLine();
             // eventbriteNET.Get<List<Event>>("")

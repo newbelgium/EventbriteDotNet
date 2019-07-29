@@ -205,5 +205,24 @@ namespace EventbriteNET.Http
                     "ShowRemaining"
                 };
         }
+
+        internal IList<TicketClass> GetEventTicketClasses(long eventId)
+        {
+            var request = new RestRequest("events/{id}/ticket_classes/");
+            request.AddUrlSegment("id", eventId.ToString());
+            request.AddQueryParameter("token", Context.Token);
+            
+
+            //Context.OrganizerId = id;
+
+            if (Context.Page > 1)
+                request.AddQueryParameter("page", Context.Page.ToString());
+
+            var ticketClasses = this.Execute<PagedTicketClasses>(request);
+
+            Context.Pagination = ticketClasses.Pagination;
+
+            return ticketClasses.TicketClasses;
+        }
     }
 }
