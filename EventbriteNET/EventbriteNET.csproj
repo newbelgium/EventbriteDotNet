@@ -44,6 +44,7 @@
     <Compile Include="Category.cs" />
     <Compile Include="Collections\PaginatedResponse.Category.cs" />
     <Compile Include="Collections\PaginatedResponse.cs" />
+    <Compile Include="FullDescription.cs" />
     <Compile Include="EventbriteObject.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="Fields.cs" />
