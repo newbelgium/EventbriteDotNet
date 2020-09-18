@@ -67,6 +67,16 @@ namespace EventbriteNET.Http
             return this.Execute<Event>(request);
         }
 
+        public FullDescription GetFullDescription(long id)
+        {
+            var request = new RestRequest("events/{id}/description");
+            request.AddUrlSegment("id", id.ToString());
+            request.AddQueryParameter("token", Context.Token);
+
+            Context.EventId = id;
+            return this.Execute<FullDescription>(request);
+        }
+
         protected override void OnCreate(Event entity)
         {
             var request = new RestRequest("events/", HttpMethod.Post);

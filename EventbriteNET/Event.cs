@@ -26,6 +26,8 @@ namespace EventbriteNET
 
         [JsonProperty("name")]
         public MultipartTextField Name { get; set; }
+        [JsonProperty("summary")]
+        public string Summary { get; set; }
         [JsonProperty("description")]
         public MultipartTextField Description { get; set; }
         [JsonProperty("url")]

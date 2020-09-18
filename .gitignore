@@ -15,3 +15,5 @@
 /EventbriteNETConsoleTest/obj/Release/EventbriteNETConsoleTest.csproj.CoreCompileInputs.cache
 /.vs/EventbriteNET/v16/Server/sqlite3
 .vs/EventbriteNET/v16/.suo
+/.vs
+/EventbriteNETConsoleTest/obj/Release
