@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Net.Http;
 using System.Linq;
+using System.Net.Http;
 
 namespace EventbriteNET.Extensions
 {

@@ -1,7 +1,6 @@
 ﻿using EventbriteNET.Extensions;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
