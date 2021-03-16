@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Net.Http;
 
-namespace EventbriteNET.Extensions
+namespace EventbriteHelper.Extensions
 {
     /// <summary>
     /// Extension methods for <see cref="HttpClient"/> related calls

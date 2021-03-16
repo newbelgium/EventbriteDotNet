@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using EventbriteHelper;
+using System;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
-using EventbriteNET;
 
-namespace EventbriteNETConsoleTest
+namespace EventbriteHelperConsoleTest
 {
     class Program
     {
@@ -26,11 +22,6 @@ namespace EventbriteNETConsoleTest
             Console.WriteLine(user.FirstName);
             Console.WriteLine(user.LastName);
           
-
-            //var ebEvents = eventbriteNET.Get<Event>().ToList();
-
-            //var pagedEvents = eventbriteNET.GetOwnedEvents();
-
             var pagedEvents = eventbriteNET.Search();
 
             eventbriteNET.Pagination = pagedEvents.Pagination;
@@ -69,12 +60,7 @@ namespace EventbriteNETConsoleTest
 
             });
 
-            //
-          
-
             Console.ReadLine();
-            // eventbriteNET.Get<List<Event>>("")
-            // Console
         }
     }
 }

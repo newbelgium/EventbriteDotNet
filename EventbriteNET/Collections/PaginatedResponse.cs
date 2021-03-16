@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace EventbriteNET.Collections
+namespace EventbriteHelper.Collections
 {
     public partial class PaginatedResponse<T> : IPaginatedResponse<T> where T : EventbriteObject
     {

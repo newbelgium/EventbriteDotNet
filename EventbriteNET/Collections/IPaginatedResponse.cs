@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace EventbriteNET.Collections
+namespace EventbriteHelper.Collections
 {
     public interface IPaginatedResponse<T> where T : EventbriteObject
     {

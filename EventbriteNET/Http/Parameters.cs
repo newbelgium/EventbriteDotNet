@@ -1,4 +1,4 @@
-﻿namespace EventbriteNET.Http
+﻿namespace EventbriteHelper.Http
 {
     /// <summary>
     /// Parameter container for REST requests

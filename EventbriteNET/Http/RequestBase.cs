@@ -1,11 +1,11 @@
-﻿using EventbriteNET.Extensions;
+﻿using EventbriteHelper.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace EventbriteNET.Http
+namespace EventbriteHelper.Http
 {
     abstract class RequestBase<TEntity> : IRequestHandler where TEntity : EventbriteObject
     {

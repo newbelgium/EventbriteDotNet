@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace EventbriteNET.Extensions
+namespace EventbriteHelper.Extensions
 {
     public static class StringExtensions
     {

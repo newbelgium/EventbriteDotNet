@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
 
-namespace EventbriteNET.Http
+namespace EventbriteHelper.Http
 {
     public interface IRestRequest
     {

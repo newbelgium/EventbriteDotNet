@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
-namespace EventbriteNET
+namespace EventbriteHelper
 {
     /// <summary>
     /// Base Eventbrite Object <see cref="https://developer.eventbrite.com/docs/data-types/#object" />

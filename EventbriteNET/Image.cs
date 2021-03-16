@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EventbriteNET
+namespace EventbriteHelper
 {
     /// <summary>
     /// Represents an Eventbrite image <see cref="https://www.eventbrite.com/developer/v3/response_formats/image/#ebapi-std:format-image"/>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EventbriteNET.Http
+namespace EventbriteHelper.Http
 {
     ///<summary>
     /// Types of parameters that can be added to requests

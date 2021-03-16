@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace EventbriteNET.Http
+namespace EventbriteHelper.Http
 {
     /// <summary>
     /// http://developer.eventbrite.com/docs/event-categories/

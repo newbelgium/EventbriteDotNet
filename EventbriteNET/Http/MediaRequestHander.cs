@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace EventbriteNET.Http
+namespace EventbriteHelper.Http
 {
     /// <summary>
     /// https://www.eventbrite.com/developer/v3/endpoints/media/
