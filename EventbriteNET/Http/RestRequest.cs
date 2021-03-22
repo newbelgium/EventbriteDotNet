@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 
-namespace EventbriteHelper.Http
+namespace EventbriteDotNet.Http
 {
     public class RestRequest : IRestRequest
     {

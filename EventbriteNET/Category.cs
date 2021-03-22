@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EventbriteHelper
+namespace EventbriteDotNet
 {
     /// <summary>
     /// Represents an Eventbrite Category <see cref="https://developer.eventbrite.com/docs/category-object/"/>

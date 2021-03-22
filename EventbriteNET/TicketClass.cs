@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace EventbriteHelper
+namespace EventbriteDotNet
 {
     /// <summary>
     /// Represents an Eventbrite Ticket Class <see cref="https://developer.eventbrite.com/docs/ticket-class-object/"/>

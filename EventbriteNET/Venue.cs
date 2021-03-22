@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EventbriteHelper
+namespace EventbriteDotNet
 {
     /// <summary>
     /// Represents an Eventbrite Venue <see cref="https://developer.eventbrite.com/docs/venue-object/"/>

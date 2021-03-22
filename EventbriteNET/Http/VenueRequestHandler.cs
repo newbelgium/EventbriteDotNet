@@ -1,11 +1,11 @@
-﻿using EventbriteHelper.Extensions;
+﻿using EventbriteDotNet.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace EventbriteHelper.Http
+namespace EventbriteDotNet.Http
 {
     /// <summary>
     /// http://developer.eventbrite.com/docs/event-details/

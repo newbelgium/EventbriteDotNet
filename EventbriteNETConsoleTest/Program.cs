@@ -1,8 +1,8 @@
-﻿using EventbriteHelper;
+﻿using EventbriteDotNet;
 using System;
 using System.Linq;
 
-namespace EventbriteHelperConsoleTest
+namespace EventbriteDotNetConsoleTest
 {
     class Program
     {

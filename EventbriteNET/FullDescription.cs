@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EventbriteHelper
+namespace EventbriteDotNet
 {
     public class FullDescription
     {

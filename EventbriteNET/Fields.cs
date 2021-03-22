@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace EventbriteHelper
+namespace EventbriteDotNet
 {
     /// <summary>
     /// <see cref="https://developer.eventbrite.com/docs/data-types/#multiparttext" />

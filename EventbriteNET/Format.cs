@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace EventbriteHelper
+namespace EventbriteDotNet
 {
     /// <summary>
     /// Represents an Eventbrite Format <see cref="https://developer.eventbrite.com/docs/format-object/"/>

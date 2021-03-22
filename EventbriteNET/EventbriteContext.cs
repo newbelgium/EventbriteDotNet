@@ -1,8 +1,8 @@
-﻿using EventbriteHelper.Http;
+﻿using EventbriteDotNet.Http;
 using System;
 using System.Collections.Generic;
 
-namespace EventbriteHelper
+namespace EventbriteDotNet
 {
     /// <summary>
     /// Context to communicate with the Eventbrite API <see cref="http://developer.eventbrite.com/docs/"/>

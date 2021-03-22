@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EventbriteHelper
+namespace EventbriteDotNet
 {
     /// <summary>
     /// Represents an Eventbrite Organizer <see cref="https://developer.eventbrite.com/docs/organizer-object/"/>

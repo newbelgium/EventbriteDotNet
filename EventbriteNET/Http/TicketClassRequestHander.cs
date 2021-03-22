@@ -1,10 +1,10 @@
-﻿using EventbriteHelper.Extensions;
+﻿using EventbriteDotNet.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace EventbriteHelper.Http
+namespace EventbriteDotNet.Http
 {
     /// <summary>
     /// https://developer.eventbrite.com/docs/ticket-classes/

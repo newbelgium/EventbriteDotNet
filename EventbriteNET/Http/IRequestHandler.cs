@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace EventbriteHelper.Http
+namespace EventbriteDotNet.Http
 {
     interface IRequestHandler
     {

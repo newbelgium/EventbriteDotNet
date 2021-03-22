@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace EventbriteHelper
+namespace EventbriteDotNet
 {
     /// <summary>
     /// Represents an Eventbrite Event <see cref="https://developer.eventbrite.com/docs/event-object/"/>

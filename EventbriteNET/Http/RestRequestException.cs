@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EventbriteHelper.Http
+namespace EventbriteDotNet.Http
 {
     public class RestRequestException : Exception
     {
