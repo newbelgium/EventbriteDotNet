@@ -48,9 +48,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EventbriteNET\EventbriteHelper.csproj">
+    <ProjectReference Include="..\EventbriteNET\EventbriteDotNet.csproj">
       <Project>{af04039a-80fb-474f-8147-76ae4e19c23e}</Project>
-      <Name>EventbriteHelper</Name>
+      <Name>EventbriteDotNet</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
