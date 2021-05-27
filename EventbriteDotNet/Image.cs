@@ -25,7 +25,7 @@ namespace EventbriteDotNet
         public long Id { get; set; }
 
         [JsonProperty("aspect_ratio")]
-        public long AspectRatio { get; set; }
+        public string AspectRatio { get; set; }
 
         [JsonProperty("edge_color")]
         public string EdgeColor { get; set; }
